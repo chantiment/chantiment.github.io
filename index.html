@@ -1,0 +1,84 @@
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="css/style.css" />
+<link rel="stylesheet" type="text/css" href="js/datetimepicker/jquery.datetimepicker.min.css" />
+<link rel="stylesheet" type="text/css" href="js/inputosaurus-text-master/inputosaurus.css" />
+
+<script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+<script type="text/javascript" src="js/datetimepicker/jquery.datetimepicker.full.min.js"></script>
+<script type="text/javascript" src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.min.js"></script>
+<script type="text/javascript" src="js/inputosaurus-text-master/inputosaurus.js"></script>
+<script type="text/javascript" src="js/chantiment.View.js"></script>
+</head>
+
+<body>
+<div id="topContainer">
+	<h2>Chantiment - Biz Charts</h2>
+</div>
+
+<div id="dataContainer">
+	<div class="heading">Data Selection</div>
+	
+	<form id="dataForm" action="">
+		<div class="formField">
+			<label for="terms">Terms</label>
+			<input type="text" id="terms" name="terms" value="" placeholder="Enter term">
+		</div>
+		
+		<div class="formSubmit">
+			<button id="submitData" name="submitData">GO</button>
+			<input type="hidden" id="submitDataFlag" name="submitDataFlag" value="1">
+		</div>
+				
+		<div class="formField">
+			<label for="terms">Distance</label>
+			<select id="datedistance" name="datedistance">
+				<option value="1year">1 year</option>
+				<option value="3months">3 months</option>
+				<option value="1month">1 month</option>
+				<option value="custom">custom</option>
+			</select>
+			
+			<input type="date" id="datestart" name="datestart" value="" placeholder="Startdate" style="display:none;">
+			<input type="date" id="dateend" name="dateend" value="" placeholder="Enddate" style="display:none;">
+		</div>
+		
+		<div class="formField">
+			<label for="granularity">Granularity</label>
+			<select id="granularity" name="granularity">
+				<option value="weekly">weekly</option>
+				<option value="daily">daily</option>
+				<option value="monthly">monthly</option>
+			</select>
+		</div>
+	</form>
+</div>
+
+<div id="chartContainer" >
+	<canvas id="chartObj"></canvas>
+	<progress id="animationProgress" max="1" value="0" style="width: 100%"></progress>
+</div>
+
+<div id="csvContainer">
+	<button id="exportCSV">CSV - Export</button>
+</div>
+
+<script type="text/javascript">
+var chantimentView;
+$(function () 
+{
+	//console.log( 'jquery ready' );
+	chantimentView	= new ChantimentView();	
+	chantimentView.initView();
+	//console.log( 'Check GET params' );
+	chantimentView.checkParams();
+	chantimentView.buildFormValues();
+	chantimentView.initTermsField();
+	chantimentView.checkParams();
+	//console.log( 'Call API' );
+	chantimentView.callApi();
+});
+</script>
+</body>
+</html>

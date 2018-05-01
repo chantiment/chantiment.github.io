@@ -1,0 +1,73 @@
+.inputosaurus-container {
+	margin: 0 0 0 0;
+	display: inline-block;
+	cursor: text;
+	max-height: 300px;
+	overflow: hidden;
+	overflow-y: auto;
+	font-family: 'Raleway', sans-serif;
+	background-color: white;
+	color: #1C1C30;
+	border:1px solid #ff5300;
+	/*height: 3em;*/
+	width: 96%;
+    padding: 0.75em;
+    float: left;
+}
+
+.inputosaurus-container li 
+{
+	display: block;
+	float: left;
+	overflow: hidden;
+	
+    margin: 1px 2px 0;
+    padding: 0 3px;
+
+	white-space: nowrap;
+	overflow: hidden;
+	-o-text-overflow: ellipsis;
+	-ms-text-overflow: ellipsis;
+	text-overflow: ellipsis;
+	
+	background-color: #a1e0f9;
+	border: #50cdff solid 1px;
+	
+	color: #5b9bcd;
+	
+	line-height: 20px;
+	cursor: default;
+}
+.inputosaurus-container li.inputosaurus-selected { background-color: #bdd6eb; }
+.inputosaurus-container li a {
+	
+	color: #5b9bcd;
+	padding: 1px;
+	text-decoration: none;
+	outline: none;
+}
+.inputosaurus-container .inputosaurus-input {
+	border: none;
+	box-shadow: none;
+	background-color: #fff;
+}
+.inputosaurus-container .inputosaurus-input input {
+	border: none;
+	
+	color: #555;
+	margin: 0;
+	padding: 0;
+	outline: none;
+	
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	box-shadow: none;
+	
+	height: 1.4em;
+}
+.inputosaurus-container .inputosaurus-input input:hover {
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	box-shadow: none;
+}
+.inputosaurus-input-hidden { display: none; }

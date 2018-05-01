@@ -1,0 +1,293 @@
+@import url('https://fonts.googleapis.com/css?family=Frank+Ruhl+Libre');
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+
+body
+{
+	font-family: 'Raleway', sans-serif;
+	font-size: 100%;
+	color: #1C1C30;
+}
+
+h1, h2, h3, h4, h5, h6
+{
+	font-family: 'Frank Ruhl Libre', serif;
+	font-weight: bold;
+	color: #1C1C30;
+}
+
+h1{	font-size: 2em; }
+h2{ font-size: 1.5em; }
+h3 { font-size: 1.17em; margin-before: 1em; margin-after: 1em }
+h4 { font-size: 1.12em; margin-before: 1.33em; margin-after: 1.33em }
+h5 { font-size: .83em; margin-before: 1.67em; margin-after: 1.67em }
+h6 { font-size: .67em; margin-before: 2.33em; margin-after: 2.33em }
+
+input, 
+select, 
+textarea
+{
+	font-family: 'Raleway', sans-serif;
+	background-color: white;
+	color: #1C1C30;
+	border:1px solid #ff5300;
+	height: 3em;
+		
+    font-size: 1em;
+    line-height: 1em;
+    padding: 0.75em;
+}
+
+button, 
+input[type="submit"]
+{
+	height: 3em;
+		
+    font-size: 1em;
+    font-weight: bold;
+	background-color: #a1e0f9;
+	color: #FFFFFF;
+	border: none;
+	cursor: pointer;
+}
+
+button:HOVER, 
+input[type="submit"]:HOVER
+{
+	background-color: #50cdff;
+	
+}
+
+.heading
+{
+	font-family: 'Raleway', sans-serif;
+	text-transform: uppercase;
+	font-weight: bold;
+	font-size: 1.17em;
+	margin-left: 2.5em;
+	
+}
+.heading:AFTER
+{
+	content: "";
+	display:block;
+	width: 2em;
+	left: -2.5em;
+	border-bottom: 2px solid #FF5300;
+	position: relative;
+    bottom: 0.3em;
+}
+
+progress
+{
+	color: #FF5300;
+	border: none;
+	background: #FFFFFF;
+}
+progress::-moz-progress-bar { background: #FF5300; }
+progress::-webkit-progress-bar { background: #fff; }
+progress::-webkit-progress-value { background: #FF5300; }
+
+
+/**********************************************************************/
+#topContainer
+{
+	width: 90%;
+	margin: 0 auto;
+	text-align: center;
+}
+
+#dataContainer
+{
+	width: 90%;
+	margin: 0 auto;
+	border-bottom: 2px solid #FF5300;
+}
+
+#chartContainer
+{
+	background-color: #f4f4f5;
+	background-image:url(../img/spinner.gif);
+	background-repeat: no-repeat;
+	background-position: center .6em;
+
+	width: 90%;
+	margin: 0 auto;
+	margin-top: 1em;
+}
+
+#csvContainer
+{
+	width: 90%;
+	margin: 0 auto;
+	margin-top: 1em;
+}
+
+
+/*********************************************************************/
+form#dataForm
+{
+	display: inline-block;	
+	width: 100%;
+}
+
+.formField
+{
+	float:left;
+	display:inline-block;
+	width: 49%;
+	margin-right: 1%;
+}
+.formField:FIRST-CHILD
+{
+	width: 92%;
+	margin-right: 1%;
+	margin-bottom: 1em;
+}
+.formField:LAST-CHILD
+{
+	margin-right: 0;
+	float:right;
+}
+
+
+.formField label
+{
+	width: 100%;
+	height: 1.5em;
+	display: inline-block;
+}
+
+.formField input, select, textarea
+{
+	width: 100%;
+}
+
+.formField input#terms
+{
+	width: 80%;
+}
+
+
+.formField input[type="date"]
+{
+	width: 49%;
+	margin-top:1em;
+}
+.formField input[type="date"]#dateend
+{
+	float:right;
+}
+
+.formSubmit
+{
+	width: 7%;
+	float: right;
+	display: inline-block;
+	
+	margin-top: 1.5em;
+	margin-bottom: 1em;
+}
+
+.formSubmit button
+{
+	width: 100%;
+    display: block;
+}
+
+.formField button#addTerm
+{
+	float: left;
+	margin-left: 1%;
+}
+
+#csvContainer button#exportCSV
+{
+	width: 100%;
+    display: block;	
+}
+
+@media only screen and (max-width: 900px) 
+{
+   
+	.formSubmit
+	{
+		width: 13%;
+    }
+    
+    .formField:FIRST-CHILD
+    {
+    	width: 85%;
+    	margin-bottom: 1em;
+    }
+    
+     .inputosaurus-container 
+    {
+    	width: 96% !important;
+    }
+    
+    .formField button#addTerm
+	{
+		float: left;
+		margin-left: 0;
+		margin-top: 1%;
+		width: 100%;
+	}
+}
+
+@media only screen and (max-width: 600px) 
+{
+	
+    .formField
+	{
+		width: 100%;
+		margin-right: 0;
+		margin-bottom: 1em;
+    }
+    
+    .formField:FIRST-CHILD
+    {
+    	width: 100%;
+    }
+    
+	.formSubmit
+	{
+		width: 100%;
+		margin-top: 0.5em;
+    }
+    
+    .inputosaurus-container 
+    {
+    	width: 95% !important;
+    }
+    
+    .formField button#addTerm
+	{
+		float: left;
+		margin-left: 0;
+		margin-top: 1%;
+		width: 100%;
+	}
+}
+@media only screen and (max-width: 550px) { .inputosaurus-container{ 	width: 94% !important; }}
+@media only screen and (max-width: 500px) { .inputosaurus-container{   	width: 93% !important; }}
+@media only screen and (max-width: 400px) { .inputosaurus-container{   	width: 92% !important; }}
+@media only screen and (max-width: 350px) { .inputosaurus-container{   	width: 91% !important; }}
+
+@media only screen and (max-width: 300px) 
+{
+	
+	.formField input[type="date"]
+	{
+		width: 100%;
+	}
+	.formField input[type="date"]#dateend
+	{
+		margin-top: 0.5em;
+	}
+	
+	 .inputosaurus-container 
+    {
+    	width: 90% !important;
+    }
+}
+@media only screen and (max-width: 250px) { .inputosaurus-container{   	width: 87% !important; }}
